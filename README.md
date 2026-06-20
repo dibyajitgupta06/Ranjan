@@ -52,28 +52,25 @@ We have already initialized a local Git repository in this folder and committed 
 4. Leave it **Public** and **DO NOT** check any checkboxes (like "Add a README", ".gitignore", or "Choose a license") as we already have these files.
 5. Click **Create Repository**.
 
-### Step 3: Link Local Project to GitHub
-In your terminal, inside the project folder, run the following commands (substitute with your real GitHub username):
-
+### Step 3: Link Local Project to GitHub (Done)
+We have already linked your local workspace to your GitHub repository and pushed the changes:
 ```bash
-# Add your GitHub remote repository link
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/ranjan-portfolio.git
+# Linked remote:
+git remote add origin https://github.com/dibyajitgupta06/Ranjan.git
 
-# Set default branch to main
-git branch -M main
-
-# Push the committed files to GitHub
+# Pushed code:
 git push -u origin main
 ```
 
 ### Step 4: Turn on GitHub Pages (Free Hosting)
-1. Go to your repository settings page on GitHub.
+1. Go to your repository page at [github.com/dibyajitgupta06/Ranjan](https://github.com/dibyajitgupta06/Ranjan) and click **Settings**.
 2. In the left navigation menu, click **Pages**.
 3. Under the **Build and deployment** section:
    - **Source**: Select "Deploy from a branch".
    - **Branch**: Choose `main` and directory `/ (root)`.
 4. Click **Save**.
-5. Within 1-2 minutes, GitHub will build your site and show a URL (e.g., `https://YOUR_GITHUB_USERNAME.github.io/ranjan-portfolio/`) where your website is live!
+5. Within 1-2 minutes, GitHub will build your site and show a URL where your website is live!
+   - Live URL: **https://dibyajitgupta06.github.io/Ranjan/**
 
 ---
 
