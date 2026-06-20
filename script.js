@@ -6,43 +6,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Interactive Smooth Cursor Follower
   const cursorFollower = document.getElementById('cursor-follower');
-  let mouseX = 0, mouseY = 0;
-  let cursorX = 0, cursorY = 0;
-  let hasMoved = false;
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth <= 1024;
 
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    if (!hasMoved) {
-      cursorFollower.style.opacity = '1';
-      cursorX = mouseX;
-      cursorY = mouseY;
-      hasMoved = true;
+  if (isTouchDevice) {
+    if (cursorFollower) cursorFollower.remove();
+  } else {
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let hasMoved = false;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!hasMoved) {
+        cursorFollower.style.opacity = '1';
+        cursorX = mouseX;
+        cursorY = mouseY;
+        hasMoved = true;
+      }
+    });
+
+    document.addEventListener('mouseleave', () => {
+      cursorFollower.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+      if (hasMoved) {
+        cursorFollower.style.opacity = '1';
+      }
+    });
+
+    function animateCursor() {
+      // Lerp: current = current + (target - current) * speed
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      
+      // GPU accelerated translate3d instead of layout-triggering left/top
+      cursorFollower.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+      
+      requestAnimationFrame(animateCursor);
     }
-  });
-
-  // Hide cursor when it leaves the window
-  document.addEventListener('mouseleave', () => {
-    cursorFollower.style.opacity = '0';
-  });
-
-  document.addEventListener('mouseenter', () => {
-    if (hasMoved) {
-      cursorFollower.style.opacity = '1';
-    }
-  });
-
-  function animateCursor() {
-    // Lerp: current = current + (target - current) * speed
-    cursorX += (mouseX - cursorX) * 0.15;
-    cursorY += (mouseY - cursorY) * 0.15;
-    
-    cursorFollower.style.left = `${cursorX}px`;
-    cursorFollower.style.top = `${cursorY}px`;
-    
     requestAnimationFrame(animateCursor);
   }
-  requestAnimationFrame(animateCursor);
 
   // Hover states for links and interactive targets
   function bindCursorHovers() {
