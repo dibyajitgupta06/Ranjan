@@ -26,9 +26,15 @@
 </head>
 <body>
 
-  <!-- Background Glows -->
-  <div class="glow-bg glow-primary"></div>
-  <div class="glow-bg glow-secondary"></div>
+  <!-- Dynamic Cursor Follower -->
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Background Animated Blobs -->
+  <div class="bg-blobs-container">
+    <div class="blob-bg blob-1"></div>
+    <div class="blob-bg blob-2"></div>
+    <div class="blob-bg blob-3"></div>
+  </div>
 
   <!-- Header & Navigation -->
   <header id="main-header" class="site-header">
@@ -63,11 +69,11 @@
     <section id="hero" class="hero-section">
       <div class="container hero-container">
         <div class="hero-content fade-in-up">
-          <span class="badge badge-primary"><i data-lucide="heart-pulse" class="icon-inline"></i> Executive Leadership</span>
-          <h1 class="hero-title">Ranjan Prashad Das Gupta</h1>
+          <span class="badge badge-primary"><i data-lucide="heart-pulse" class="icon-inline"></i> Healthcare Operations Leader</span>
+          <h1 class="hero-title">Ranjan Prashad <br><span class="gradient-text">Das Gupta</span></h1>
           <p class="hero-subtitle">Chief Operating Officer | Healthcare & Hospital Management Specialist</p>
           <p class="hero-description">
-            Ph.D. in Hospital Management with over 25 years of extensive experience driving operations, patient-flow efficiency, financial stewardship, and regulatory compliance across leading hospitals and diagnostics networks.
+            Accomplished Hospital Administrator with a Ph.D. in Hospital Management. Backed by 25+ years of leadership driving clinic efficiency, financial stewardship, supply chain performance, and clinical compliance.
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary"><i data-lucide="mail"></i> Get In Touch</a>
@@ -76,16 +82,16 @@
           
           <div class="hero-stats">
             <div class="stat-item">
-              <span class="stat-num">25+</span>
-              <span class="stat-lbl">Years in Healthcare</span>
+              <span class="stat-num" data-val="25">0</span>
+              <span class="stat-lbl">Years Experience</span>
             </div>
             <div class="stat-item">
-              <span class="stat-num">10+</span>
-              <span class="stat-lbl">Hospitals & Centers Managed</span>
+              <span class="stat-num" data-val="12">0</span>
+              <span class="stat-lbl">Hospitals Managed</span>
             </div>
             <div class="stat-item">
               <span class="stat-num">Ph.D.</span>
-              <span class="stat-lbl">Hospital Management</span>
+              <span class="stat-lbl">Education Rank</span>
             </div>
           </div>
         </div>
@@ -103,20 +109,20 @@
     <section id="about" class="about-section scroll-reveal">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Executive Summary</span>
-          <h2>Objective & Career Vision</h2>
+          <span class="section-tag"><i data-lucide="award" class="icon-inline"></i> Executive Profile</span>
+          <h2>Objective & Leadership Philosophy</h2>
         </div>
         <div class="about-grid">
           <div class="about-card glass">
-            <i data-lucide="award" class="card-icon text-accent"></i>
-            <h3>Leadership Philosophy</h3>
+            <i data-lucide="compass" class="card-icon text-main-accent"></i>
+            <h3>Mission & Vision</h3>
             <p>
               To establish myself as a challenging, promising, and honest healthcare professional in the Hospital & Diagnostic sector. I focus on ensuring a win-win situation between organization objectives, patient satisfaction, and workforce excellence, utilizing my practical expertise as a Trainer and Counselor to meet the challenges of dynamic health systems.
             </p>
           </div>
           <div class="about-card glass">
-            <i data-lucide="shield-check" class="card-icon text-primary"></i>
-            <h3>Operational Excellence</h3>
+            <i data-lucide="shield-check" class="card-icon text-accent"></i>
+            <h3>Strategic Alignment</h3>
             <p>
               Applying structured frameworks for daily operations management, clinic planning, supply chain excellence, quality assurance, safety, and regulatory alignment (e.g., Joint Commission, CMS guidelines) to deliver maximum clinical output and optimal care.
             </p>
@@ -125,68 +131,132 @@
       </div>
     </section>
 
-    <!-- Core Expertise -->
+    <!-- Interactive Achievements (Impact metrics) -->
+    <section id="impact" class="impact-section scroll-reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i data-lucide="trending-up" class="icon-inline"></i> Operational Footprint</span>
+          <h2>Key Impact & Achievements</h2>
+          <p class="section-desc">Measurable performance metrics from hospital management operations.</p>
+        </div>
+
+        <div class="impact-grid">
+          <!-- Metric 1 -->
+          <div class="impact-card glass">
+            <div class="impact-metric"><span class="counter" data-val="35">0</span>%</div>
+            <h4>Wait-Time Reduction</h4>
+            <p>Optimized clinical workflows and emergency-room throughput systems to increase patient flow.</p>
+          </div>
+          <!-- Metric 2 -->
+          <div class="impact-card glass">
+            <div class="impact-metric"><span class="counter" data-val="12">0</span>%</div>
+            <h4>Budget Efficiencies</h4>
+            <p>Identified cost-saving opportunities through lean procurement and supply chain management.</p>
+          </div>
+          <!-- Metric 3 -->
+          <div class="impact-card glass">
+            <div class="impact-metric"><span class="counter" data-val="100">0</span>%</div>
+            <h4>Compliance Rating</h4>
+            <p>Aligned operations and staff training with standard regulations (Joint Commission & CMS guidelines).</p>
+          </div>
+          <!-- Metric 4 -->
+          <div class="impact-card glass">
+            <div class="impact-metric"><span class="counter" data-val="500">0</span>+</div>
+            <h4>Staff Supervised</h4>
+            <p>Managed multi-disciplinary clinical, professional, and administrative teams across hospital systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Expertise & Skills Meter -->
     <section id="expertise" class="expertise-section scroll-reveal">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Core Competencies</span>
-          <h2>Areas of Professional Expertise</h2>
-          <p class="section-desc">Key pillars of healthcare management and clinical operations refined over two decades.</p>
+          <span class="section-tag"><i data-lucide="layers" class="icon-inline"></i> Core Competencies</span>
+          <h2>Professional Capabilities</h2>
         </div>
-        
-        <div class="expertise-grid">
-          <!-- Card 1 -->
-          <div class="expertise-card glass-hover">
-            <div class="card-header">
-              <i data-lucide="activity" class="expertise-icon"></i>
-              <h3>Daily Operations Management</h3>
+
+        <div class="expertise-layout">
+          <!-- Competencies Cards -->
+          <div class="expertise-grid">
+            <div class="expertise-card glass-hover">
+              <div class="card-header">
+                <i data-lucide="activity" class="expertise-icon"></i>
+                <h3>Daily Operations</h3>
+              </div>
+              <p>Supervising operations of surgical units, diagnostics labs, pharmacies, imaging, and ER departments.</p>
             </div>
-            <p>Directly supervising key operational departments including surgical services, emergency throughput, laboratory diagnostics, medical imaging, and pharmacy logistics to maintain zero downtime and peak performance.</p>
+
+            <div class="expertise-card glass-hover">
+              <div class="card-header">
+                <i data-lucide="users" class="expertise-icon"></i>
+                <h3>Patient Experience</h3>
+              </div>
+              <p>Maximizing clinical flow efficiency to minimize wait times, optimize bed capacity, and simplify discharges.</p>
+            </div>
+
+            <div class="expertise-card glass-hover">
+              <div class="card-header">
+                <i data-lucide="dollar-sign" class="expertise-icon"></i>
+                <h3>Financial Audit</h3>
+              </div>
+              <p>Designing budgets, tracking expenditures, and implementing cost-saving measures through procurement strategies.</p>
+            </div>
+
+            <div class="expertise-card glass-hover">
+              <div class="card-header">
+                <i data-lucide="shield-check" class="expertise-icon"></i>
+                <h3>Regulatory Code</h3>
+              </div>
+              <p>Ensuring hospital alignment with standard rules (Joint Commission, CMS guidelines, health-safety codes).</p>
+            </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="expertise-card glass-hover">
-            <div class="card-header">
-              <i data-lucide="users" class="expertise-icon"></i>
-              <h3>Patient Flow & Experience</h3>
-            </div>
-            <p>Maximizing clinical flow efficiency to minimize wait times, optimize bed capacity, simplify discharge processes, and elevate the overall inpatient and outpatient satisfaction index.</p>
-          </div>
+          <!-- Skills Progress Bars -->
+          <div class="skills-column">
+            <h3><i data-lucide="sliders" class="icon-inline"></i> Leadership Performance</h3>
+            <div class="skills-list">
+              <div class="skill-bar-wrap">
+                <div class="skill-info">
+                  <span class="skill-label">Hospital Operations Management</span>
+                  <span class="skill-val">95%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-progress" data-width="95%"></div>
+                </div>
+              </div>
 
-          <!-- Card 3 -->
-          <div class="expertise-card glass-hover">
-            <div class="card-header">
-              <i data-lucide="trending-up" class="expertise-icon"></i>
-              <h3>Financial Stewardship</h3>
-            </div>
-            <p>Designing budgets, tracking department expenditures, managing procurement processes, and implementing cost-saving measures through lean resource utilization and predictive inventory analysis.</p>
-          </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info">
+                  <span class="skill-label">Financial & Procurement Audits</span>
+                  <span class="skill-val">88%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-progress" data-width="88%"></div>
+                </div>
+              </div>
 
-          <!-- Card 4 -->
-          <div class="expertise-card glass-hover">
-            <div class="card-header">
-              <i data-lucide="file-check" class="expertise-icon"></i>
-              <h3>Regulatory Compliance</h3>
-            </div>
-            <p>Aligning facility procedures, infrastructure quality, and administrative processes with local laws and standardizations (Joint Commission, CMS guidelines, health-safety codes).</p>
-          </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info">
+                  <span class="skill-label">Supply Chain & Inventory Management</span>
+                  <span class="skill-val">90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-progress" data-width="90%"></div>
+                </div>
+              </div>
 
-          <!-- Card 5 -->
-          <div class="expertise-card glass-hover">
-            <div class="card-header">
-              <i data-lucide="git-branch" class="expertise-icon"></i>
-              <h3>Workforce Deployment</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-info">
+                  <span class="skill-label">Staffing & Shift Optimization</span>
+                  <span class="skill-val">92%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-progress" data-width="92%"></div>
+                </div>
+              </div>
             </div>
-            <p>Designing modern staffing schedules and workloads to address nursing/support shortages, supporting professional development, and maintaining multi-disciplinary harmony.</p>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="expertise-card glass-hover">
-            <div class="card-header">
-              <i data-lucide="truck" class="expertise-icon"></i>
-              <h3>Supply Chain Management</h3>
-            </div>
-            <p>Managing inventory cycle audits, medical equipment procurement, pharmaceuticals storage, and contract negotiation, backed by a PG Diploma in Supply Chain Management.</p>
           </div>
         </div>
       </div>
@@ -196,7 +266,7 @@
     <section id="experience" class="experience-section scroll-reveal">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Career Milestones</span>
+          <span class="section-tag"><i data-lucide="calendar" class="icon-inline"></i> Work History</span>
           <h2>Professional Timeline</h2>
           <p class="section-desc">Click on any role to expand/collapse core operational responsibilities.</p>
         </div>
@@ -207,9 +277,12 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card glass">
               <div class="timeline-header">
-                <span class="timeline-date">July 2024 – Present</span>
-                <h3>Chief Operating Officer</h3>
-                <span class="company"><i data-lucide="building-2"></i> AKS Khan Healthcare Ltd. <span class="location">Dhaka</span></span>
+                <div class="timeline-title-wrap">
+                  <span class="timeline-date">July 2024 – Present</span>
+                  <h3>Chief Operating Officer</h3>
+                  <span class="company"><i data-lucide="building-2"></i> AKS Khan Healthcare Ltd. <span class="location">Dhaka</span></span>
+                </div>
+                <i data-lucide="chevron-down" class="expand-icon"></i>
               </div>
               <div class="timeline-body">
                 <ul class="responsibilities-list">
@@ -228,9 +301,12 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card glass">
               <div class="timeline-header">
-                <span class="timeline-date">Sept 2015 – June 2024</span>
-                <h3>General Manager</h3>
-                <span class="company"><i data-lucide="building-2"></i> MAX Hospital Ltd. <span class="location">Dhaka</span></span>
+                <div class="timeline-title-wrap">
+                  <span class="timeline-date">Sept 2015 – June 2024</span>
+                  <h3>General Manager</h3>
+                  <span class="company"><i data-lucide="building-2"></i> MAX Hospital Ltd. <span class="location">Dhaka</span></span>
+                </div>
+                <i data-lucide="chevron-down" class="expand-icon"></i>
               </div>
               <div class="timeline-body">
                 <ul class="responsibilities-list">
@@ -248,9 +324,12 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card glass">
               <div class="timeline-header">
-                <span class="timeline-date">April 2015 – Aug 2015</span>
-                <h3>Senior Manager – Business Development</h3>
-                <span class="company"><i data-lucide="building-2"></i> MAX Hospital Ltd. <span class="location">Chittagong</span></span>
+                <div class="timeline-title-wrap">
+                  <span class="timeline-date">April 2015 – Aug 2015</span>
+                  <h3>Senior Manager – Business Development</h3>
+                  <span class="company"><i data-lucide="building-2"></i> MAX Hospital Ltd. <span class="location">Chittagong</span></span>
+                </div>
+                <i data-lucide="chevron-down" class="expand-icon"></i>
               </div>
               <div class="timeline-body">
                 <ul class="responsibilities-list">
@@ -266,9 +345,12 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card glass">
               <div class="timeline-header">
-                <span class="timeline-date">Nov 2010 – March 2015</span>
-                <h3>Branch Manager</h3>
-                <span class="company"><i data-lucide="building-2"></i> Popular Diagnostic Centre Ltd. <span class="location">Chittagong</span></span>
+                <div class="timeline-title-wrap">
+                  <span class="timeline-date">Nov 2010 – March 2015</span>
+                  <h3>Branch Manager</h3>
+                  <span class="company"><i data-lucide="building-2"></i> Popular Diagnostic Centre Ltd. <span class="location">Chittagong</span></span>
+                </div>
+                <i data-lucide="chevron-down" class="expand-icon"></i>
               </div>
               <div class="timeline-body">
                 <ul class="responsibilities-list">
@@ -291,13 +373,16 @@
               <div class="timeline-dot"></div>
               <div class="timeline-card glass">
                 <div class="timeline-header">
-                  <span class="timeline-date">Jan 2008 – Dec 2010</span>
-                  <h3>Regional Sales Manager</h3>
-                  <span class="company"><i data-lucide="building-2"></i> Popular Pharmaceuticals Ltd. <span class="location">Dhaka</span></span>
+                  <div class="timeline-title-wrap">
+                    <span class="timeline-date">Jan 2008 – Dec 2010</span>
+                    <h3>Regional Sales Manager</h3>
+                    <span class="company"><i data-lucide="building-2"></i> Popular Pharmaceuticals Ltd. <span class="location">Dhaka</span></span>
+                  </div>
+                  <i data-lucide="chevron-down" class="expand-icon"></i>
                 </div>
                 <div class="timeline-body">
                   <ul class="responsibilities-list">
-                    <li>Led medical representative teams across districts to drive ethical pharmaceutical sales.</li>
+                    <li>Led medical representative teams across districts to drive pharmaceutical operations.</li>
                     <li>Awarded **Best Regional Sales** certificate by Popular Pharmaceuticals Ltd. (2009).</li>
                   </ul>
                 </div>
@@ -309,9 +394,12 @@
               <div class="timeline-dot"></div>
               <div class="timeline-card glass">
                 <div class="timeline-header">
-                  <span class="timeline-date">July 2007 – Dec 2007</span>
-                  <h3>Senior Area Manager</h3>
-                  <span class="company"><i data-lucide="building-2"></i> Popular Pharmaceuticals Ltd. <span class="location">Dhaka</span></span>
+                  <div class="timeline-title-wrap">
+                    <span class="timeline-date">July 2007 – Dec 2007</span>
+                    <h3>Senior Area Manager</h3>
+                    <span class="company"><i data-lucide="building-2"></i> Popular Pharmaceuticals Ltd. <span class="location">Dhaka</span></span>
+                  </div>
+                  <i data-lucide="chevron-down" class="expand-icon"></i>
                 </div>
                 <div class="timeline-body">
                   <ul class="responsibilities-list">
@@ -326,9 +414,12 @@
               <div class="timeline-dot"></div>
               <div class="timeline-card glass">
                 <div class="timeline-header">
-                  <span class="timeline-date">Jan 2001 – Dec 2002</span>
-                  <h3>Field Supervisor (Area Manager)</h3>
-                  <span class="company"><i data-lucide="building-2"></i> Beximco Pharmaceuticals Ltd. <span class="location">Bangladesh</span></span>
+                  <div class="timeline-title-wrap">
+                    <span class="timeline-date">Jan 2001 – Dec 2002</span>
+                    <h3>Field Supervisor (Area Manager)</h3>
+                    <span class="company"><i data-lucide="building-2"></i> Beximco Pharmaceuticals Ltd. <span class="location">Bangladesh</span></span>
+                  </div>
+                  <i data-lucide="chevron-down" class="expand-icon"></i>
                 </div>
                 <div class="timeline-body">
                   <ul class="responsibilities-list">
@@ -343,9 +434,12 @@
               <div class="timeline-dot"></div>
               <div class="timeline-card glass">
                 <div class="timeline-header">
-                  <span class="timeline-date">June 1997 – Dec 2000</span>
-                  <h3>Medical Representative</h3>
-                  <span class="company"><i data-lucide="building-2"></i> Beximco Infusions Ltd. <span class="location">Bangladesh</span></span>
+                  <div class="timeline-title-wrap">
+                    <span class="timeline-date">June 1997 – Dec 2000</span>
+                    <h3>Medical Representative</h3>
+                    <span class="company"><i data-lucide="building-2"></i> Beximco Infusions Ltd. <span class="location">Bangladesh</span></span>
+                  </div>
+                  <i data-lucide="chevron-down" class="expand-icon"></i>
                 </div>
                 <div class="timeline-body">
                   <ul class="responsibilities-list">
@@ -364,15 +458,15 @@
     <section id="education" class="education-section scroll-reveal">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Academic Background</span>
-          <h2>Education & Training</h2>
+          <span class="section-tag"><i data-lucide="graduation-cap" class="icon-inline"></i> Qualifications</span>
+          <h2>Academic Credentials</h2>
         </div>
 
         <div class="education-grid">
           <!-- Card 1 -->
           <div class="education-card glass">
             <span class="edu-year">2026</span>
-            <div class="edu-icon-wrap"><i data-lucide="graduation-cap"></i></div>
+            <div class="edu-icon-wrap"><i data-lucide="award"></i></div>
             <h3>Ph.D. in Hospital Management</h3>
             <p class="edu-inst">Selinus University of Science & Literature, Italy</p>
           </div>
@@ -380,7 +474,7 @@
           <!-- Card 2 -->
           <div class="education-card glass">
             <span class="edu-year">2023</span>
-            <div class="edu-icon-wrap"><i data-lucide="graduation-cap"></i></div>
+            <div class="edu-icon-wrap"><i data-lucide="award"></i></div>
             <h3>Masters of Public Health (MPH)</h3>
             <p class="edu-inst">Premier University, Chattogram, Bangladesh</p>
             <span class="edu-spec">Specialization: Hospital Management</span>
@@ -389,7 +483,7 @@
           <!-- Card 3 -->
           <div class="education-card glass">
             <span class="edu-year">2003</span>
-            <div class="edu-icon-wrap"><i data-lucide="graduation-cap"></i></div>
+            <div class="edu-icon-wrap"><i data-lucide="award"></i></div>
             <h3>MBA in Marketing</h3>
             <p class="edu-inst">Prime University, Dhaka, Bangladesh</p>
           </div>
@@ -397,23 +491,15 @@
           <!-- Card 4 -->
           <div class="education-card glass">
             <span class="edu-year">2021</span>
-            <div class="edu-icon-wrap"><i data-lucide="graduation-cap"></i></div>
+            <div class="edu-icon-wrap"><i data-lucide="award"></i></div>
             <h3>PG Diploma in Supply Chain Management</h3>
             <p class="edu-inst">Melbourne Metropolitan College, Australia</p>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="education-card glass">
-            <span class="edu-year">1995</span>
-            <div class="edu-icon-wrap"><i data-lucide="graduation-cap"></i></div>
-            <h3>B.Sc. in Mathematics, Statistics & Psychology</h3>
-            <p class="edu-inst">Chattogram College, Bangladesh</p>
           </div>
         </div>
 
         <!-- Training Acquired -->
         <div class="training-box glass scroll-reveal">
-          <h3><i data-lucide="scroll"></i> Key Professional Trainings</h3>
+          <h3><i data-lucide="clipboard-check" class="icon-inline"></i> Executive Training</h3>
           <div class="training-list">
             <div class="training-item-detail">
               <strong>Hospital Management (7-Day)</strong>
@@ -432,7 +518,7 @@
               <span>Prothom Alo Jobs, Bangladesh</span>
             </div>
             <div class="training-item-detail">
-              <strong>Leadership & Micro-Marketing Training</strong>
+              <strong>Leadership & Micro-Marketing</strong>
               <span>Professional Leadership Seminars</span>
             </div>
           </div>
@@ -445,9 +531,8 @@
     <section id="certifications" class="certifications-section scroll-reveal">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Credentials</span>
+          <span class="section-tag"><i data-lucide="shield" class="icon-inline"></i> Badges</span>
           <h2>Professional Certifications</h2>
-          <p class="section-desc">Comprehensive list of healthcare standards and administration awards.</p>
         </div>
 
         <div class="certifications-container">
@@ -460,52 +545,52 @@
 
           <div class="cert-grid">
             <div class="cert-card glass" data-category="leadership">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Professional Certificate in Managerial Excellence</h4>
               <p class="cert-meta">WARD (2022)</p>
             </div>
             <div class="cert-card glass" data-category="admin">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Master Class in Hospital Administration Certificate</h4>
-              <p class="cert-meta">Masterclass (2021) – JICA Support</p>
+              <p class="cert-meta">Masterclass (2021) – JICA</p>
             </div>
             <div class="cert-card glass" data-category="safety">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Public Health Research Methodology</h4>
               <p class="cert-meta">Asian University for Women (2022)</p>
             </div>
             <div class="cert-card glass" data-category="safety">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Sorting & Disposal of Medical Waste</h4>
               <p class="cert-meta">JICA (2021)</p>
             </div>
             <div class="cert-card glass" data-category="leadership">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Be a Successful HR Leader</h4>
               <p class="cert-meta">ABP Making Professionals (2021)</p>
             </div>
             <div class="cert-card glass" data-category="safety">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Fire Fighting, Prevention & First Aid</h4>
               <p class="cert-meta">Bangladesh Fire Service (2016)</p>
             </div>
             <div class="cert-card glass" data-category="admin">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Quality Assurance in Radiotherapy & Diagnostics</h4>
               <p class="cert-meta">RDNC & QC Facilities Project (2021)</p>
             </div>
             <div class="cert-card glass" data-category="admin">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Baby Friendly Hospital Initiative (BFHI)</h4>
               <p class="cert-meta">BFHI (2022)</p>
             </div>
             <div class="cert-card glass" data-category="leadership">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>HRBP Advanced</h4>
               <p class="cert-meta">CHRMP, India (2022)</p>
             </div>
             <div class="cert-card glass" data-category="safety">
-              <i data-lucide="certificate" class="cert-badge"></i>
+              <i data-lucide="check-circle" class="cert-badge"></i>
               <h4>Patient Service Excellence Award</h4>
               <p class="cert-meta">MAX Hospital Ltd (2021)</p>
             </div>
@@ -518,30 +603,30 @@
     <section id="highlights" class="highlights-section scroll-reveal">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Personal Portfolio</span>
+          <span class="section-tag"><i data-lucide="globe" class="icon-inline"></i> Footprint</span>
           <h2>Global Footprint & Interests</h2>
         </div>
 
         <div class="highlights-grid">
           <!-- Countries Visited -->
           <div class="highlight-card glass">
-            <h3><i data-lucide="globe"></i> Countries Visited</h3>
+            <h3><i data-lucide="map"></i> Countries Visited</h3>
             <ul class="highlight-list">
-              <li><i data-lucide="map-pin"></i> <strong>Singapore</strong> (Leisure)</li>
-              <li><i data-lucide="map-pin"></i> <strong>India</strong> (Business & multiple medical summits)</li>
-              <li><i data-lucide="map-pin"></i> <strong>Thailand</strong> (Leisure)</li>
-              <li><i data-lucide="map-pin"></i> <strong>Malaysia</strong> (Leisure)</li>
+              <li><i data-lucide="navigation"></i> <strong>Singapore</strong> (Leisure)</li>
+              <li><i data-lucide="navigation"></i> <strong>India</strong> (Surgical summits & business)</li>
+              <li><i data-lucide="navigation"></i> <strong>Thailand</strong> (Leisure)</li>
+              <li><i data-lucide="navigation"></i> <strong>Malaysia</strong> (Leisure)</li>
             </ul>
           </div>
 
           <!-- Interests & Activities -->
           <div class="highlight-card glass">
-            <h3><i data-lucide="compass"></i> Activities & Hobbies</h3>
+            <h3><i data-lucide="smile"></i> Activities & Hobbies</h3>
             <ul class="highlight-list">
-              <li><i data-lucide="book-open"></i> Reading medical & health journals</li>
-              <li><i data-lucide="heart"></i> Organizing voluntary health camps</li>
-              <li><i data-lucide="plane"></i> Traveling and cross-border networking</li>
-              <li><i data-lucide="trophy"></i> Sports (Football, Cricket, Carom)</li>
+              <li><i data-lucide="book-open"></i> Reading clinical & medical journals</li>
+              <li><i data-lucide="plus-square"></i> Organizing voluntary health camps</li>
+              <li><i data-lucide="users"></i> Cross-border healthcare networking</li>
+              <li><i data-lucide="activity"></i> Sports (Football, Cricket, Badminton)</li>
             </ul>
           </div>
         </div>
@@ -552,9 +637,8 @@
     <section id="contact" class="contact-section scroll-reveal">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Get in Touch</span>
+          <span class="section-tag"><i data-lucide="mail" class="icon-inline"></i> Collaborate</span>
           <h2>Contact & References</h2>
-          <p class="section-desc">Reach out for leadership opportunities, consulting, or speaking engagements.</p>
         </div>
 
         <div class="contact-grid">
